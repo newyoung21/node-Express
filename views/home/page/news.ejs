@@ -1,0 +1,41 @@
+<%- include ../include/head %>
+<div id="news">
+	<div class="banner">
+		<div class="bannerT">
+			<img src="images/news.jpg" alt="" class="bannerI">
+		</div>
+		<div class="bannerB"></div>
+	</div>
+	<div class="container">
+		<div class="newsMain clearfix">
+			<% doc.forEach(function(d,index){ %>
+				<div class="col-sm-6">
+					<div class="newsItem">
+						<a href="/nc/<%= d._id %>" class="nmTime"><%= d.time.day %></a>
+						<p ><a href="/nc/<%= d._id %>" class="nmT"><%= d.title %></a></p>
+						<p class="text"><%= d.summary %></p>
+					</div>
+				</div>
+			<% }) %>
+			<div class="shadow"></div>
+		</div>
+		<div class="paging">
+			<% if(isFirstPage && isLastPage){ %>
+
+			<% }else if(isFirstPage){ %>
+				<span class="spanA">首页</span>
+				<a href="/n?p=<%= page+1 %>" class="next">下页</a>
+				<span class="pageN"><%= page %></span>
+			<% }else if(isLastPage){ %>
+				<a href="/n?p=<%= page-1 %>">上页</a>
+				<span class="spanA">尾页</span>
+				<span class="pageN"><%= page %></span>
+			<% }else{ %>
+				<a href="/n?p=<%= page-1 %>">上页</a>
+				<a href="/n?p=<%= page+1 %>" class="next">下页</a>
+				<span class="pageN"><%= page %></span>
+			<% } %>
+		</div>
+	</div>
+</div>
+<%- include ../include/footer %>

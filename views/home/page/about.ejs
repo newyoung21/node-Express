@@ -1,0 +1,103 @@
+<%- include ../include/head %>
+<div id="about">
+	<div class="banner">
+		<div class="bannerT">
+			<img src="images/about.jpg" alt="" class="bannerI">
+		</div>
+		<div class="bannerB"></div>
+	</div>
+	<div class="container clearfix">
+		<div class="col-sm-4 col-xs-12">
+			<div class="call-t">联系我们</div>
+			<div class="call-Item">
+				<span class="Cimg sp1"></span> 
+				<p>电话</p>
+				<p>0755-23707481</p>
+			</div>
+			<div class="call-Item">
+				<span class="Cimg sp2"></span>
+				<p>QQ</p>
+				<p>1121099093</p>
+			</div>
+			<div class="call-Item">
+				<span class="Cimg sp3"></span>
+				<p>邮箱</p>
+				<p>1121099093@qq.com</p>
+			</div>
+			<div class="call-Item">
+				<span class="Cimg sp4"></span>
+				<p class="address">深圳市龙华新区观澜街道岗头福田新村5号106铺</p>
+			</div>
+		</div>
+		<div class="col-sm-8 col-xs-12">
+			<form id="leave" >
+				<div class="call-t">在线留言</div>
+				<div class="col-sm-4 meg"><input type="text" name="company" class="form-control" placeholder="您的称呼"></div>
+				<div class="col-sm-4 meg"><input type="text" name="telphone" class="form-control" placeholder="您的电话"></div>
+				<div class="col-sm-4 meg"><input type="text" name="address" class="form-control" placeholder="您的地址"></div>
+				<div class="col-sm-12 meg">
+					<textarea name="content" id="" cols="30"  class="form-control"></textarea>
+				</div>
+				<div class="col-sm-6 meg">
+					<button type="submit" id="sub" class="but form-control">提交留言</button>
+				</div>
+				<div class="col-sm-6 meg">
+					<button type="button" class="but form-control Lzz">重置留言</button>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+<%- include ../include/footer %>
+<script type="text/javascript" src="/javascripts/jquery.validate.js"></script>
+<script type="text/javascript">
+		$('.Lzz').on('click',function(){
+			$('#leave input').val('');
+		})
+		$('#leave').validate({
+			rules:{
+				company:{
+					required:true,
+					minlength:2,
+					maxlength:20
+				},
+				telphone:{
+					required:true,
+					minlength:8,
+					maxlength:12
+				},
+				address:{
+					required:true,
+					minlength:5,
+					maxlength:30
+				},
+
+				content:{
+					required:true
+				},
+
+			},
+
+			submitHandler:function() {
+			    ajaxSubmit();
+			}
+		})
+
+	  function ajaxSubmit(){
+	  		$.ajax({
+	  		    url:"/leave",
+	  		    type:"POST",
+	  		    data:$('#leave').serialize(),
+	  		    datatype:"json",
+	  		    success:function(res){
+	  		      if(res.r == 'success'){
+	  			  alert('添加成功');
+	  			  window.location.reload();
+	  		      }else{
+	  			  alert('添加失败');
+	  		      }
+	  		    }
+	  	    }); 
+	  }
+		
+</script>

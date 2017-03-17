@@ -1,0 +1,24 @@
+	<%- include ../include/head %>
+	<div id="news">
+		<div class="banner">
+			<div class="bannerT">
+				<img src="/images/news.jpg" alt="" class="bannerI">
+			</div>
+			<div class="bannerB"></div>
+		</div>
+		<div class="container">
+			<div class="newsDetail">
+				<!-- 填写标题 -->
+				<h3><%= doc.title %></h3>
+				<!-- 时间 -->
+				<p><span class="newsDt"><%= doc.time.day %></span></p>
+				<!-- 内容 -->
+				<div class="newsDm">
+					<%- doc.editor %>
+				</div>
+			</div>
+		</div>
+	</div>
+	<%- include ../include/footer %>
+</body>
+</html> 

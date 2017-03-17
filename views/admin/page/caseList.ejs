@@ -1,0 +1,61 @@
+<%- include ../include/head %>
+	<article  class="adm">
+		<div class="main">
+			<%- include ../include/left %>
+			<div class="content">
+				<div class="panel panel-info scr">
+				    <div class="panel-heading">
+				        <h3 class="panel-title">
+				            案例列表<a href="/users/ac" class="add">添加案例</a>
+				        </h3>
+				    </div>
+				    <div class="panel-body">
+				        <div class="table-responsive">
+				        	<table class="table table-bordered">
+				        		<thead>
+				        			<tr>
+				        				<th>排序</th>
+				        				<th>缩略图</th>
+				        				<th>首页显示</th>
+				        				<th>添加时间</th>
+				        				<th>操作</th>
+				        			</tr> 
+				        		</thead>
+				        		<tbody>
+				        			<% img.forEach(function(doc,index){ %>
+				        				<tr>
+				        					<td></td>
+				        					<td class="clI">
+				        						<img src="/images/<%= doc.src %>" alt="">
+				        					</td>
+				        					<td><%= doc.show %></td>
+				        					<td><%= doc.time.day %></td>
+				        					<td>
+				        						<a href="/modifyC/<%= doc._id %>" class="btn" >修改</a>
+				        						<a href="/rmC/<%= doc._id %>/<%= doc.src %>" class="btn btn-warning" onclick="return confirm('确定要删除吗？');"></a>
+				        					</td>
+				        				</tr>
+				        			<% }) %>
+				        			
+				        		</tbody>
+				        	</table>
+				        </div>
+				    </div>
+				</div>
+			</div>
+		</div>
+	</article>
+	<% if(error){ %>
+		<script type="text/javascript">
+			alert('<%= error %>');
+		</script>
+	<% } %>
+	<% if(success){ %>
+		<script type="text/javascript">
+			alert('<%= success %>');
+		</script>
+	<% } %>
+	<script type="text/javascript" src="/users/js/bootstrap.min.js"></script>
+</body>
+</html>
+<%- include ../include/footer %>

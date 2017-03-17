@@ -1,0 +1,74 @@
+<%- include ../include/head %>
+
+	<div id="content">
+		<div class="pics_wrap">
+			<div id="html5zoo-1">
+				<ul class="html5zoo-slides" >
+					<% ban.forEach(function(ba,index){ %>
+						<li><a href=""><img src="images/<%= ba.src %>" alt="" class="bnner"></a></li>
+					<% }) %>
+				</ul> 
+			</div>
+		</div>
+		<div class="Iitem">
+			<div class="col-sm-2 col-xs-4"><img src="images/indIcon_03.jpg" alt=""><p><a href="">住宅装修</a></p></div>
+			<div class="col-sm-2 col-xs-4"><img src="images/indIcon_05.jpg" alt=""><p><a href="">店铺店面装修</a></p></div>
+			<div class="col-sm-2 col-xs-4"><img src="images/indIcon_07.jpg" alt=""><p><a href="">办公室、写字楼装修</a></p></div>
+			<div class="col-sm-2 col-xs-4"><img src="images/indIcon_09.jpg" alt=""><p><a href="">厂房装修</a></p></div>
+			<div class="col-sm-2 col-xs-4"><img src="images/indIcon_11.jpg" alt=""><p><a href="">铺贴地砖</a></p></div>
+			<div class="col-sm-2 col-xs-4"><img src="images/indIcon_13.jpg" alt=""><p><a href="">水电安装</a></p></div>
+		</div>
+		<div class="imgs clearfix">
+			<% img.forEach(function(doc,index){ %>
+				<% if(index == 2 || index == 3 || index == 8 ){ %>
+									<div class="col-sm-6 col-xs-12"><img src="images/<%= doc.src %>" alt=""></div>
+								<% }else{ %>
+									<div class="col-sm-3 col-xs-6"><img src="images/<%= doc.src %>" alt=""></div>
+								<% } %>
+			<% }) %>
+		</div>
+		<div class="work">
+			<h3>在建工地<span>Construction site</span></h3>
+			<div class="work-show clearfix">
+				<div class="col-sm-4 col-xs-12"><img src="images/work_03.jpg" alt=""></div>
+				<div class="col-sm-4 col-xs-12"><img src="images/work_05.jpg" alt=""></div>
+				<div class="col-sm-4 col-xs-6"><img src="images/work_07.jpg" alt=""></div>
+			</div>
+		</div>
+		<div class="text clearfix">
+			<div class="news col-sm-6 col-xs-12">
+				<h3 class="h-title">新闻动态<span>News information</span></h3>
+				<div class="newsContent">
+					<% news.forEach(function(n,index){  %>
+						<div class="nItem">
+							<a class="time" href="/nc/<%= n._id %>"><%= n.time.day %></a>
+							<a href="/nc/<%= n._id %>" class="nText"><%= n.title %></a>
+						</div>
+					<% }) %>
+					
+					<!-- <div class="nItem">
+						<a class="time" href="">2016-10-20</a>
+						<a href="" class="nText">景海鹏太空日记：“米饭面条加热后就忘吃了”</a>
+					</div>
+					<div class="nItem">
+						<a class="time" href="">2016-10-20</a>
+						<a href="" class="nText">景海鹏太空日记：“米饭面条加热后就忘吃了”</a>
+					</div>	 -->
+				</div>
+				<div class="img">
+					<img src="images/text_03.png" alt="">
+				</div>
+			</div>
+			<div class="about col-sm-6 col-xs-12">
+				<h3 class="h-title">关于我们<span>About us</span></h3>
+				<div class="aText">深圳市清风装饰有限公司有丰富的施工经验、优秀的设计、精湛的施工队伍、和环保的装修理念。</div>
+				<div class="aText at2">
+					我们施工队为您创造一个温馨的家居生活环境，经过多年的风风雨雨，所以深知业主的每一分钱的份量，也明白自己的责任，像朋友一样为您建造阳光般的居所是我们的服务宗旨。用好客户的每一分钱，尊重自己的的每一滴汗水是我们的经营理念。
+				</div>
+				<div class="img">
+					<img src="images/about_05.png" alt="">
+				</div>
+			</div>
+		</div>
+	</div>
+<%- include ../include/footer %>

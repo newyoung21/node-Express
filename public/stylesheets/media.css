@@ -1,0 +1,242 @@
+@media (min-width: 1200px){
+	.container{
+		width: 1200px;
+	}
+}
+@media (max-width: 768px){
+	#sidebar{
+		display: none;
+	}
+	.Iitem a {
+    	font-size: 14px;
+	}
+	.Iitem div {
+	    margin: 15px 0;
+	}
+	.footer-call{
+		display: none;
+	}
+	.navbar-header {
+	    height: 60px;
+	}
+	.logo{
+		margin: 0;
+		text-align: left;
+	}
+	.logo img{
+		transform: scale(0.7,0.7);
+	}
+	.logo>.title{
+		font-size: 14px;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform:translate(-50%,-50%);
+		margin: 0;
+	}
+	#head {
+    	padding: 0 ;
+	}
+	.logo>.eng {
+	  display: none;
+	}
+	#qingf li a{
+		width: 100%;
+		margin: 0;
+		border-top: 1px solid #ece8e8;;
+	}
+	#qingf li {
+    	height: 41px;
+    	width: 100%;
+	}
+	.activeNav{
+		background:none;
+		color: #666666 !important;
+	}
+	.navbar-collapse{
+		float: none !important;
+	}
+	.work h3 {
+	    font-size: 24px;
+	    margin-bottom: 15px;
+	}
+	.work h3 span {
+	    font-size: 14px;
+	    font-weight: normal;
+	    margin-left: 5px;
+	    bottom: -3px;
+	}
+	.work {
+	    padding: 25px 10px;
+	}
+	.work-show>div:nth-child(3){
+		display: none;
+	}
+	.work-show div {
+    	padding: 0 15px;
+    	margin-bottom: 15px;
+	}
+	.h-title {
+	    font-size: 24px;
+	    margin-bottom: 15px;
+	}
+	.text>div {
+	    padding: 10px 15px 5px 15px;
+	}
+	.h-title span {
+	    font-size: 14px;
+	    margin-left: 5px;
+	}
+	.nItem .time {
+	    width: 90px;
+	    height: 32px;
+	    line-height: 32px;
+	    letter-spacing: 0;
+	}
+	.nText {
+	    left: 90px;
+	    font-size: 14px;
+	    line-height: 25px;
+	    height: 25px;
+	    padding: 0 5px;
+	}
+	.img>img {
+	    width: 100%;
+	}
+	.aText {
+	    font-size: 16px;
+	    margin-bottom: 15px;
+	}
+	.footer-text{
+		font-size: 12px;
+		height: auto;
+		line-height: 25px;
+	}
+	.fds{
+		display: block;
+	}
+	.wf{
+		margin:0;
+	}
+	.footer-text a {
+	    font-size: 12px;
+	}
+	.Iitem img{
+		width: 70%;
+	}
+	.bannerI{
+		width: 100%;
+	}
+	.bannerT {
+	    height: 60px;
+	}
+	.companyContent .col-sm-7>div {
+	    margin-bottom: 15px;
+	    font-size: 16px;
+	}
+	.companyContent .container {
+	    padding: 15px 0 !important;
+	}
+	.companyContent .col-sm-5 img {
+	    width: 100%;
+	}
+	.comWork-m {
+	    padding: 20px 0 30px 0;
+	    margin: 0;
+	}
+	.comWork-m>div{
+		margin-bottom: 15px;
+	}
+	.itens {
+    	padding-top: 25px;
+ 		width: 100%;
+	}
+	.itens img{
+		width: 50px;
+		height: 50px;
+	}
+	.itens p {
+	    font-size: 14px;
+	}
+	.bor{
+		display: none;
+	}
+	.sert-t>div>p {
+	    font-size: 14px;
+	    margin-bottom: 25px;
+	}
+	.service .container {
+	    margin-bottom: 35px;
+	}
+	.caseShow{
+		margin-top: 25px;
+	}
+	.paging{
+		padding: 0 20px;
+		margin-bottom: 30px;
+	}
+	.paging>a{
+		width: 100px;
+		border-radius: 10px;
+		font-size: 14px;
+		height: 30px;
+		line-height: 30px;
+	}
+	.pageN{
+		height: 30px;
+		line-height: 30px;
+		font-size: 14px;
+	}
+	.next{
+		right: 20px;
+	}
+	.shadow{
+		display: none;
+	}
+	.newsMain {
+	    margin: 5px 0 0px 0;
+	    padding: 50px 15px 10px 15px;
+	}
+	.newsMain>.col-sm-6 {
+	    padding: 0 15px;
+	    margin-bottom: 45px;
+	    font-size: 16px;
+	}
+	#about .container>.col-sm-4 {
+	    padding:15px;
+	}
+	#about .container {
+	    margin-top: 15px;
+	    margin-bottom: 15px;
+	}
+	.col-sm-8 .call-t {
+	    margin: 0;
+	}
+	.meg {
+	    margin-top: 20px;
+	    padding: 0;
+	}
+	#about .container>.col-sm-8 {
+	    padding: 15px;
+	}
+	.call-Item {
+	    padding: 11px 8px 11px 8px;
+	    font-size: 14px;
+	}
+	.call-Item .Cimg{
+		transform: scale(0.8,0.8);
+		top:5px;
+	}
+	.call-Item>p {
+	    margin-bottom: 5px;
+	}
+	.call-t {
+	    font-size: 16px;
+	    height: 35px;
+	    line-height: 35px;
+	}
+	.but {
+	    height: 30px;
+	    line-height: 30px;
+	    font-size: 16px;
+}
